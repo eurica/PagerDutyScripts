@@ -62,11 +62,12 @@
 
 <select id="search-technology" name="technology">
   <option value="">All languages</option>
-  <option>JavaScript</option>
+  <option value="JavaScript">JavaScript & CoffeScript</option>
   <option>Ruby</option>
   <option>Python</option>
   <option>PHP</option>
   <option>Lua</option>
+  <option value="Tool">Other tools</option>
 </select>
 <table id="scripttable" class="table  table-striped table-hover">
  <thead>
@@ -80,7 +81,7 @@
    <tr>
      <td><a href="https://github.com/eurica/pdjs">PDJS</a></td>
      <td>Javascript library to access PagerDuty REST and event APIs</td>
-     <td>JavaScript, CoffeeScript</td>
+     <td>JavaScript</td>
    </tr>
    <tr>
      <td><a href="https://gist.github.com/eurica/6034108">Email to webhook</a></td>
@@ -111,19 +112,19 @@
    <tr>
      <td><a href="http://blog.pagerduty.com/2014/03/hack-your-on-call-status-with-pagerdutys-api/">On-call API examples</a></td>
      <td>Shell script one-liners and a JavaScript bookmarklet</td>
-     <td>node.js, shell script</td>
+     <td>node.js</td>
    </tr>  
    
    <tr>
      <td><a href="https://github.com/dsshafer/phoneduty">Phoneduty</a></td>
      <td>Dispatch incoming telephone voicemails/SMS messages from Twilio according to a PagerDuty on-call schedule. A <a href="http://davejustdave.com/2012/08/17/twilio-pagerduty-phoneduty/">much improved</a> version of <a href="http://blog.pagerduty.com/2012/02/triggering-an-alert-from-a-phone-call-code-sample/">an earlier code sample</a></td>
-     <td>Python, GAE, Twilio</td>
+     <td>Python</td>
    </tr>  
    
    <tr>
      <td><a href="https://github.com/github/hubot-scripts/blob/master/src/scripts/pagerduty.coffee">Hubot integration</a></td>
      <td>PagerDuty can now participate in any chatroom that <a href="https://github.com/github/hubot">Hubot</a> supports thanks to Github and contributors.</td>
-     <td>CoffeeScript</td>
+     <td>JavaScript</td>
    </tr>  
    
    <tr>
@@ -147,8 +148,16 @@
    <tr>
      <td><a href="https://github.com/esigler/lita-pagerduty">lita-pagerduty</a></td>
      <td>A plugin for the <a href="https://www.lita.io/">Lita</a> chatbot for checking who's on call, scheduling, ack, resolve, etc. Works with any chatroom <a href="https://www.lita.io/plugins">supported</a> by Lita</td>
-     <td></td>
+     <td>Tool</td>
    </tr>  
+
+   <tr>
+     <td><a href="https://blog.pagerduty.com/2014/02/build-out-your-pagerduty-reports-with-zoho/">Zoho Reporting</a></td>
+     <td>Zoho reports can import PagerDuty data and run SQL queries against it.  This blog post shows how to generate reports from your incidents.</td>
+     <td>Tool</td>
+   </tr>  
+
+
 <!--
    <tr>
      <td><a href=""></a></td>
@@ -186,7 +195,7 @@ If you'd like to add something to this page either email <a href="mailto:dave@pa
       $( document ).ready( function() {
         window.dynatable = $('#scripttable').dynatable({
           features: {
-            paginate: true,
+            paginate: false,
             recordCount: false,
             sorting: true
           },
